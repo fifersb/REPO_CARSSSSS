@@ -1,0 +1,9 @@
+footer .contenedor{
+    text-align: center;
+    font-size: 20px;
+    background-color: teal;
+    color:whitesmoke;
+    margin: 30px;
+    border-top: black solid 2px;
+    border-bottom: black solid 3px;
+}

@@ -1,0 +1,54 @@
+{% extends "WEB/base.html" %}
+{% load static %}
+
+{% block contenido %}
+    <main>
+        <section id="Bienvenida">
+            <h1>Formulario Modificar Insumos </h1>
+            <p></p>
+        </section>
+        <script>
+            function ir() {
+               location.href='/admin_insumos/'; 
+            }
+        </script>
+        <section>
+
+            <div id="formulario">     
+                    <script src="{% static 'js/scrip.js' %}"></script>
+                    <script src="{% static 'js/formularioInsumos.js' %}"></script>
+
+                <form action="{% url 'MODIFICAR' %}" method="POST" onsubmit="">
+                {% csrf_token %}
+
+                    <label for="txtNombreInsumo">Nombre:</label>
+                    <input type="text" value="{{insumo.nombre}}" name="txtNombreInsumo" id="txtNombreInsumo" minlength="3" maxlength="120" required>
+
+                    <label for="txtPrecio">Precio:</label>
+                    <input type="number" value="{{insumo.precio}}" name="txtPrecio" id="txtPrecio" min="1" required>
+
+                    <label for="txtDescripcion">Descripción:</label>
+                    <input type="text" value="{{insumo.descripcion}}" name="txtDescripcion" id="txtDescripcion" minlength="3" maxlength="200" required>
+
+                    <label for="txtStock">Stock:</label>
+                    <input type="number" value="{{insumo.stock}}" name="txtStock" id="txtStock" min="0"  required>
+
+
+                    <input class="btn btn-verde" type="submit" name="btnModificar Insumo" id="btnModificar Insumo">
+                    <input class="btn btn-rojo" type="reset" name="btnLimpiar" id="btnLimpiar">
+                    <input class="btn btn-narajo" type="button" value="Admin. Insumos" onclick="ir()">
+                </form>
+            </div>
+        </section>
+         <div>
+        <h2>{{msg}}</h2>
+    </div>
+    </main>
+
+    <footer>
+            <div class="contenedor">
+                <p>Lavado Riper Cars Sitio Web </p>
+            </div>
+    </footer>
+
+{% endblock contenido %}

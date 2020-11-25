@@ -1,0 +1,32 @@
+#blog h4{
+text-align: center;
+margin-top: 10px;
+font-size: 20px;
+color: darkblue;
+}
+section h3{
+text-align: center;
+margin-top: 50px;
+font-size: 40px;
+color:black;
+}
+
+#blog .contenedor{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: 50px;
+}
+#blog .contenedor img{
+width: 500px;
+height: 500px;
+border-radius: 90px;
+border: solid 10px teal;
+padding: 5px;
+}
+#blog article{
+margin: 16px;
+}
+#blog .contenedor img:hover{
+transform: scale(1.1);
+}

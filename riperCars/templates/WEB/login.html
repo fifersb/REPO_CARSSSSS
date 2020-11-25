@@ -1,0 +1,43 @@
+{% extends "WEB/base.html" %}
+{% load static %}
+
+{% block contenido %}
+    <main>
+        <section id="Bienvenida">
+            <h1>Formulario Login </h1>
+            <p></p>
+        </section>
+
+        <section>
+
+            <div id="formulario">
+               <form action="" method="POST">
+                    {% csrf_token %}
+
+
+
+                    <label for="txtuser">Usuario:</label>
+                    <input type="text" name="txtuser" id="txtuser" minlength="3" maxlength="120" required>
+
+                    <label for="txtPass">Password:</label>
+                    <input type="password" name="txtPass" id="txtPass">
+
+
+                    <input class="btn btn-verde" type="submit" name="btnEnviar" id="btnEnviar">
+                    <input class="btn btn-rojo" type="reset" name="btnLimpiar" id="btnLimpiar">
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <div class="contenedor">
+                <p>Lavado Riper Cars Sitio Web </p>
+            </div>
+    </footer>
+      <div>
+        <h2>{{msg}}</h2>
+    </div>
+
+{% endblock contenido %}

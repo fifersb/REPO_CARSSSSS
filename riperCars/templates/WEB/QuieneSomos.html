@@ -1,0 +1,38 @@
+{% extends "WEB/base.html" %}
+{% load static %}
+
+
+
+{% block contenido %}
+    <main>
+        <section id="Bienvenida">
+            <h1>Quiénes Somos</h1>
+            <p></p>
+        </section>
+
+            <section id="Somos">
+
+                {% for item in Info %}
+                    <div id="parrafo1">
+                        <h1>Misión</h1>
+                          {{item.mision}} 
+
+                    </div>
+                    <div id="parrafo2">
+                        <h1>Visión</h1>
+                           {{item.vision}} 
+                        
+                    </div>
+                                
+                {% endfor %}
+                    
+            </section>
+
+        <footer>
+            <div class="contenedor">
+                <p>Lavado Riper Cars Sitio Web </p>
+
+            </div>
+        </footer>
+    </main>
+{% endblock contenido %}

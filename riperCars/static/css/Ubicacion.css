@@ -1,0 +1,33 @@
+#Somos .casaMatriz img{
+    width: 590px;
+    height: 500px;
+    direction: rtl;
+
+
+
+    /*border-radius: 90px;*/
+   /* border: solid 10px teal;*/
+    
+}
+
+#Somos .casaMatriz {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+#Info .Comentarios p {
+    padding: 7px ;
+  
+    margin-bottom: 6px;
+}
+
+
+
+
+
+
+

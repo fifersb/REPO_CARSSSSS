@@ -1,0 +1,54 @@
+{% extends "WEB/base.html" %}
+{% load static %}
+
+
+{% block contenido %}
+<main>
+
+    <section id="Bienvenida">
+        <h1>Formulario Usuario</h1>
+        <p></p>
+    </section>
+
+    <section>
+        <div id="formulario">
+            <script src="{% static 'js/scrip.js' %}"></script>
+            <script src="{% static 'js/formulariocliente.js' %}"></script>
+
+            <form action="" method="POST" onsubmit="return validarcliente()">
+                {% csrf_token %}
+                <label for="txtNombre">Nombre:</label>
+                <input type="text" name="txtNombre" id="txtNombre" minlength="3" maxlength="80" required>
+
+                <label for="txtapellido">Apellido:</label>
+                <input type="text" name="txtapellido" id="txtapellido" minlength="3" maxlength="80" required>
+
+                <label for="txtEmail">Email:</label>
+                <input type="email" name="txtEmail" id="txtEmail" required>
+
+                <label for="txtNombreusuario">Nombre de usuario:</label>
+                <input type="text" name="txtNomuser" id="txtNomuser" minlength="8" required>
+
+                <label for="txtPass">Contraseña:</label>
+                <input type="password" name="txtPass" id="txtPass" minlength="8" required>
+
+                <label for="txtPass">Repetir Contraseña:</label>
+                <input type="password" name="txtPas" id="txtPas" minlength="8" required>
+                
+                <input class="btn btn-verde" type="submit" name="btnEnviar" id="btnEnviar">
+                <input class="btn btn-rojo" type="reset" name="btnLimpiar" id="btnLimpiar">
+
+            </form>
+        </div>
+
+    </section>
+    <footer>
+        <div class="contenedor">
+            <p>Lavado Riper Cars Sitio Web </p>
+        </div>
+    </footer>
+</main>
+<div style="text-align: center; color: darkblue;">
+    <h2>{{msg}}</h2>
+</div>
+{% endblock contenido %}

@@ -1,0 +1,24 @@
+.Misión p{
+   /* padding: 7px ;*/
+    /*display: flex;*/
+   /* justify-content: center;*/
+    margin-bottom: 6px;
+    margin-top: 1px;
+}
+
+.contenedor h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.misionandvision h2{
+    display: flex;
+    justify-content: center;
+}
+
+.misionandvision p{
+    display: flex;
+    justify-content: center;
+}
+

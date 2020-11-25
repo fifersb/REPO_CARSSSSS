@@ -1,0 +1,33 @@
+{% extends "WEB/base.html" %}
+{% load static %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'dist/css/lightbox.min.css' %}">
+{% endblock estilos %}
+
+{% block contenido %}
+  <main>
+    <section id="Bienvenida">
+        <h1>Bienvenidos</h1>
+        <p></p>
+    </section>
+    <section id="galeria">
+            {% for item in fotos %}
+              <div>
+            <a href="{{item.imagen.url}}" data-lightbox="Vehiculos" data-title="Lavado exteriores motos Sucursal sur">
+                <img src="{{item.imagen.url}}" alt="">
+            </a>
+        </div>
+            {% endfor %}
+      </section>
+
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+
+    <footer>
+      <div class="contenedor">
+        <p>Lavado Riper Cars Sitio Web </p>
+
+      </div>
+    </footer>
+  </main>
+{% endblock contenido %}
